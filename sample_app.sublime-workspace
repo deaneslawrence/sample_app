@@ -3,10 +3,22 @@
 	{
 		"selected_items":
 		[
+			[
+				"p",
+				"presence"
+			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 627,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -32,6 +44,14 @@
 	},
 	"file_history":
 	[
+		"/Users/gourd/work/sample_app/app/controllers/users_controller.rb",
+		"/Users/gourd/work/sample_app/app/views/users/show.html.erb",
+		"/Users/gourd/work/sample_app/config/routes.rb",
+		"/Users/gourd/work/sample_app/app/assets/stylesheets/custom.css.scss",
+		"/Users/gourd/work/sample_app/app/views/layouts/application.html.erb",
+		"/Users/gourd/work/sample_app/app/models/user.rb",
+		"/Users/gourd/work/sample_app/spec/models/user_spec.rb",
+		"/Users/gourd/work/sample_app/db/migrate/20120925043501_add_index_to_users_email.rb"
 	],
 	"find":
 	{
@@ -66,8 +86,35 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 627,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								550,
+								550
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -123,10 +170,10 @@
 		],
 		"width": 0.0
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 277.0,
 	"status_bar_visible": true
 }
