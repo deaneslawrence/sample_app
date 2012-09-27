@@ -18,6 +18,38 @@
 				"buffer_size": 627,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "spec/requests/user_pages_spec.rb",
+			"settings":
+			{
+				"buffer_size": 1683,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/locales/en.yml",
+			"settings":
+			{
+				"buffer_size": 271,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/user.rb",
+			"settings":
+			{
+				"buffer_size": 834,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 596,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -31,7 +63,7 @@
 	},
 	"console":
 	{
-		"height": 0.0
+		"height": 150.0
 	},
 	"distraction_free":
 	{
@@ -44,11 +76,19 @@
 	},
 	"file_history":
 	[
-		"/Users/gourd/work/sample_app/app/controllers/users_controller.rb",
-		"/Users/gourd/work/sample_app/app/views/users/show.html.erb",
-		"/Users/gourd/work/sample_app/config/routes.rb",
-		"/Users/gourd/work/sample_app/app/assets/stylesheets/custom.css.scss",
 		"/Users/gourd/work/sample_app/app/views/layouts/application.html.erb",
+		"/Users/gourd/work/sample_app/app/controllers/users_controller.rb",
+		"/Users/gourd/work/sample_app/app/helpers/users_helper.rb",
+		"/Users/gourd/work/sample_app/config/environments/production.rb",
+		"/Users/gourd/work/sample_app/app/assets/stylesheets/custom.css.scss",
+		"/Users/gourd/work/sample_app/app/views/shared/_error_messages.html.erb",
+		"/Users/gourd/work/sample_app/app/views/users/new.html.erb",
+		"/Users/gourd/work/sample_app/app/views/users/show.html.erb",
+		"/Users/gourd/work/sample_app/spec/factories.rb",
+		"/Users/gourd/work/sample_app/spec/requests/user_pages_spec.rb",
+		"/Users/gourd/work/sample_app/config/environments/test.rb",
+		"/Users/gourd/Library/Application Support/Sublime Text 2/Packages/User/Ruby.sublime-settings",
+		"/Users/gourd/work/sample_app/config/routes.rb",
 		"/Users/gourd/work/sample_app/app/models/user.rb",
 		"/Users/gourd/work/sample_app/spec/models/user_spec.rb",
 		"/Users/gourd/work/sample_app/db/migrate/20120925043501_add_index_to_users_email.rb"
@@ -86,7 +126,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -107,7 +147,119 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "spec/requests/user_pages_spec.rb",
+					"settings":
+					{
+						"buffer_size": 1683,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1665,
+								1665
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 249.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "config/locales/en.yml",
+					"settings":
+					{
+						"buffer_size": 271,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								243,
+								243
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/models/user.rb",
+					"settings":
+					{
+						"buffer_size": 834,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								834,
+								834
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/layouts/application.html.erb",
+					"settings":
+					{
+						"buffer_size": 596,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								457,
+								457
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -124,7 +276,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{
