@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"signed",
+				"signed_in"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"should",
+				"should_not"
+			],
+			[
 				"n",
 				"new"
 			],
@@ -16,61 +28,53 @@
 	"buffers":
 	[
 		{
-			"file": "app/controllers/users_controller.rb",
+			"file": "app/views/users/new.html.erb",
 			"settings":
 			{
-				"buffer_size": 1018,
+				"buffer_size": 276,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/users/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 218,
-				"line_ending": "Unix",
-				"name": "<% provide(:title, 'All users') %>"
 			}
 		},
 		{
 			"file": "spec/requests/user_pages_spec.rb",
 			"settings":
 			{
-				"buffer_size": 3477,
+				"buffer_size": 4135,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "spec/requests/authentication_pages_spec.rb",
+			"file": "app/controllers/users_controller.rb",
 			"settings":
 			{
-				"buffer_size": 2944,
+				"buffer_size": 1534,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/layouts/_header.html.erb",
+			"contents": "Searching 197 files for \"signed_in_user\"\n\n/Users/gourd/work/sample_app/app/controllers/users_controller.rb:\n    1  class UsersController < ApplicationController\n    2:   before_filter :signed_in_user, only: [:index, :edit, :update, :destroy]\n    3    before_filter :correct_user,   only: [:edit, :update]\n    4    before_filter :admin_user,     only: :destroy\n    .\n   53    private\n   54  \n   55:     def signed_in_user\n   56        unless signed_in?\n   57          store_location\n\n2 matches in 1 file\n\n\nSearching 197 files for \"signin_url\"\n\n/Users/gourd/work/sample_app/app/controllers/users_controller.rb:\n   53        unless signed_in?\n   54          store_location\n   55:         redirect_to signin_url, notice: \"Please sign in.\" unless signed_in?\n   56        end\n   57      end\n   ..\n   60        if signed_in?\n   61          store_location\n   62:         redirect_to signin_url, notice: \"Unable to create new User.\" unless signed_in?\n   63        end\n   64      end\n\n2 matches in 1 file\n\n\nSearching 197 files for \"signin\"\n\n/Users/gourd/work/sample_app/app/controllers/users_controller.rb:\n   53        unless signed_in?\n   54          store_location\n   55:         redirect_to signin_url, notice: \"Please sign in.\" unless signed_in?\n   56        end\n   57      end\n   ..\n   60        if signed_in?\n   61          store_location\n   62:         redirect_to signin_url, notice: \"Unable to create new User.\" unless signed_in?\n   63        end\n   64      end\n\n/Users/gourd/work/sample_app/app/views/layouts/_header.html.erb:\n   23              </li>\n   24            <% else %>\n   25:             <li><%= link_to \"Sign in\", signin_path %></li>\n   26            <% end %>\n   27          </ul>\n\n/Users/gourd/work/sample_app/config/routes.rb:\n    6    \n    7    match '/signup',  to: 'users#new'\n    8:   match '/signin',  to: 'sessions#new'\n    9    match '/signout', to: 'sessions#destroy', via: :delete\n   10    \n\n/Users/gourd/work/sample_app/spec/requests/authentication_pages_spec.rb:\n    5    subject { page }\n    6  \n    7:   describe \"signin page\" do\n    8:     before { visit signin_path }\n    9  \n   10      it { should have_selector('h1',    text: 'Sign in') }\n   ..\n   12    end\n   13  \n   14:   describe \"signin\" do\n   15:     before { visit signin_path }\n   16  \n   17      describe \"with invalid information\" do\n   ..\n   37      it { should have_link('Settings', href: edit_user_path(user)) }\n   38      it { should have_link('Sign out', href: signout_path) }\n   39:     it { should_not have_link('Sign in', href: signin_path) }\n   40  \n   41      describe \"followed by signout\" do\n   ..\n   60          end\n   61  \n   62:         describe \"after signing in\" do\n   63  \n   64            it \"should render the desired protected page\" do\n   ..\n   77          describe \"submitting to the update action\" do\n   78            before { put user_path(user) }\n   79:           specify { response.should redirect_to(signin_path) }\n   80          end\n   81  \n\n/Users/gourd/work/sample_app/spec/support/utilities.rb:\n    2  \n    3  def sign_in(user)\n    4:   visit signin_path\n    5    fill_in \"Email\",    with: user.email\n    6    fill_in \"Password\", with: user.password\n\n12 matches across 5 files\n\n\nSearching 197 files for \"---\"\n\n/Users/gourd/work/sample_app/.bundle/config:\n    1: ---\n    2  BUNDLE_WITHOUT: production\n    3  \n\n1 match in 1 file\n",
 			"settings":
 			{
-				"buffer_size": 1122,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Gemfile",
-			"settings":
-			{
-				"buffer_size": 639,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "lib/tasks/sample_data.rake",
-			"settings":
-			{
-				"buffer_size": 570,
+				"buffer_size": 3351,
 				"line_ending": "Unix",
-				"name": "namespace :db do"
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 596,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/_footer.html.erb",
+			"settings":
+			{
+				"buffer_size": 341,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -98,30 +102,34 @@
 	},
 	"file_history":
 	[
+		"/Users/gourd/work/sample_app/app/views/users/index.html.erb",
+		"/Users/gourd/work/sample_app/Gemfile",
+		"/Users/gourd/work/sample_app/lib/tasks/sample_data.rake",
+		"/Users/gourd/work/sample_app/app/views/users/edit.html.erb",
+		"/Users/gourd/work/sample_app/spec/requests/authentication_pages_spec.rb",
+		"/Users/gourd/work/sample_app/app/views/users/_fields.html.erb",
+		"/Users/gourd/work/sample_app/app/views/users/new.html.erb",
+		"/Users/gourd/work/sample_app/app/controllers/users_controller.rb",
+		"/Users/gourd/work/sample_app/app/models/user.rb",
+		"/Users/gourd/work/sample_app/spec/models/user_spec.rb",
+		"/Users/gourd/work/sample_app/spec/factories.rb",
+		"/Users/gourd/work/sample_app/app/views/users/_user.html.erb",
+		"/Users/gourd/work/sample_app/spec/requests/user_pages_spec.rb",
+		"/Users/gourd/work/sample_app/app/views/layouts/_header.html.erb",
 		"/Users/gourd/work/sample_app/app/helpers/sessions_helper.rb",
 		"/Users/gourd/work/sample_app/app/controllers/sessions_controller.rb",
 		"/Users/gourd/work/sample_app/app/assets/stylesheets/custom.css.scss",
-		"/Users/gourd/work/sample_app/spec/requests/user_pages_spec.rb",
-		"/Users/gourd/work/sample_app/app/controllers/users_controller.rb",
-		"/Users/gourd/work/sample_app/app/views/users/edit.html.erb",
-		"/Users/gourd/work/sample_app/spec/factories.rb",
-		"/Users/gourd/work/sample_app/spec/requests/authentication_pages_spec.rb",
 		"/Users/gourd/work/sample_app/spec/support/utilities.rb",
-		"/Users/gourd/work/sample_app/app/views/layouts/_header.html.erb",
-		"/Users/gourd/work/sample_app/Gemfile",
 		"/Users/gourd/work/sample_app/app/assets/javascripts/application.js",
 		"/Users/gourd/work/sample_app/app/views/sessions/new.html.erb",
 		"/Users/gourd/work/sample_app/app/controllers/application_controller.rb",
-		"/Users/gourd/work/sample_app/spec/models/user_spec.rb",
 		"/Users/gourd/work/sample_app/db/migrate/20120928040651_add_remember_token_to_users.rb",
-		"/Users/gourd/work/sample_app/app/models/user.rb",
 		"/Users/gourd/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/gourd/work/sample_app/config/locales/en.yml",
 		"/Users/gourd/work/sample_app/app/views/layouts/application.html.erb",
 		"/Users/gourd/work/sample_app/app/helpers/users_helper.rb",
 		"/Users/gourd/work/sample_app/config/environments/production.rb",
 		"/Users/gourd/work/sample_app/app/views/shared/_error_messages.html.erb",
-		"/Users/gourd/work/sample_app/app/views/users/new.html.erb",
 		"/Users/gourd/work/sample_app/app/views/users/show.html.erb",
 		"/Users/gourd/work/sample_app/config/environments/test.rb",
 		"/Users/gourd/Library/Application Support/Sublime Text 2/Packages/User/Ruby.sublime-settings",
@@ -130,13 +138,14 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			"/Users/gourd/work/sample_app"
 		]
 	},
 	"find_state":
@@ -144,6 +153,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"---",
+			"signin",
+			"signin_url",
+			"signed_in_user",
+			"profile",
+			"gravatar",
+			"gravatar_for",
+			"gravatar"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -161,56 +178,27 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/users_controller.rb",
+					"file": "app/views/users/new.html.erb",
 					"settings":
 					{
-						"buffer_size": 1018,
+						"buffer_size": 276,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								506,
-								506
+								275,
+								275
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/views/users/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 218,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								218,
-								218
-							]
-						],
-						"settings":
-						{
-							"auto_name": "<% provide(:title, 'All users') %>",
 							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -220,19 +208,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "spec/requests/user_pages_spec.rb",
 					"settings":
 					{
-						"buffer_size": 3477,
+						"buffer_size": 4135,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								584,
-								584
+								2401,
+								2401
 							]
 						],
 						"settings":
@@ -248,19 +236,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "spec/requests/authentication_pages_spec.rb",
+					"buffer": 2,
+					"file": "app/controllers/users_controller.rb",
 					"settings":
 					{
-						"buffer_size": 2944,
+						"buffer_size": 1534,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2915,
-								2915
+								1291,
+								1291
 							]
 						],
 						"settings":
@@ -270,25 +258,132 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 804.0,
+						"translation.y": 429.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"settings":
+					{
+						"buffer_size": 3351,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										185,
+										199
+									],
+									[
+										406,
+										420
+									],
+									[
+										697,
+										707
+									],
+									[
+										875,
+										885
+									],
+									[
+										1185,
+										1191
+									],
+									[
+										1363,
+										1369
+									],
+									[
+										1627,
+										1633
+									],
+									[
+										1813,
+										1819
+									],
+									[
+										2043,
+										2049
+									],
+									[
+										2085,
+										2091
+									],
+									[
+										2218,
+										2224
+									],
+									[
+										2255,
+										2261
+									],
+									[
+										2529,
+										2535
+									],
+									[
+										2661,
+										2667
+									],
+									[
+										2920,
+										2926
+									],
+									[
+										3067,
+										3073
+									],
+									[
+										3286,
+										3289
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								3203,
+								3203
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"output_tag": 4,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1590.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "app/views/layouts/_header.html.erb",
+					"file": "app/views/layouts/application.html.erb",
 					"settings":
 					{
-						"buffer_size": 1122,
+						"buffer_size": 596,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1122,
-								1122
+								566,
+								566
 							]
 						],
 						"settings":
@@ -305,52 +400,23 @@
 				},
 				{
 					"buffer": 5,
-					"file": "Gemfile",
+					"file": "app/views/layouts/_footer.html.erb",
 					"settings":
 					{
-						"buffer_size": 639,
+						"buffer_size": 341,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								120,
-								120
+								113,
+								113
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "lib/tasks/sample_data.rake",
-					"settings":
-					{
-						"buffer_size": 570,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								570,
-								570
-							]
-						],
-						"settings":
-						{
-							"auto_name": "namespace :db do",
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -365,7 +431,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"input":
 	{

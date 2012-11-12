@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_filter :signed_in_user, only: [:index, :edit, :update, :destroy]
+  before_filter :signed_out_user, only: [:new, :create]
   before_filter :correct_user,   only: [:edit, :update]
   before_filter :admin_user,     only: :destroy
 
@@ -8,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def new
-  	@user = User.new 	
+    @user = User.new 	
   end
 
   def create
@@ -52,6 +53,13 @@ class UsersController < ApplicationController
       unless signed_in?
         store_location
         redirect_to signin_url, notice: "Please sign in." unless signed_in?
+      end
+    end
+
+    def signed_out_user
+      if signed_in?
+        store_location
+        redirect_to root_path, notice: "Unable to create new User." if signed_in?
       end
     end
 
